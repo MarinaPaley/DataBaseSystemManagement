@@ -22,6 +22,7 @@
     <ClCompile Include="target.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Stack.h" />
     <ClInclude Include="target.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -38,16 +38,29 @@ public:
 	*/
 	std::size_t GetSize() const;
 
+	bool isEmpty() const;
+
+private:
 	/**
- *  \brief Элементы стека для хранения целых чисел.
- */
+   *  \brief Элементы стека для хранения целых чисел.
+   */
 	class StackElement
 	{
 	public:
+		/**
+        *  \brief Конструктор по умолчанию.
+        */
 		StackElement();
 
+		/**
+		*  \brief Конструктор с параметрами.
+		*  \param value Целое значение.
+		*/
 		StackElement(int value);
 
+		/**
+		*  \brief Деструктор.
+		*/
 		~StackElement();
 
 	private:
@@ -55,8 +68,12 @@ public:
 		StackElement* next;
 	};
 
-private:
-	std::size_t size;
-	StackElement element;
+	int size;
+
+	StackElement* top;
+
+	Stack(const Stack& rhs);
+
+	Stack operator= (const Stack& rhs);
 };
 

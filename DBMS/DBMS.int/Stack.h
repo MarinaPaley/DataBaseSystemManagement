@@ -15,9 +15,13 @@ public:
 
 	/**
 	*  \brief Создание объекта из последовательности.
+	*  \param values Последовательность значений, добавляемых в стек при инициализации.
 	*/
-	Stack(std::initializer_list<int> value);
+	Stack(const std::initializer_list<int> values);
 
+	/**
+	 *  \brief Деструктор.
+	 */
 	~Stack();
 
 	/**

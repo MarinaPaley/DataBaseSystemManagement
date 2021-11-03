@@ -21,6 +21,9 @@
   <ItemGroup>
     <ClInclude Include="Stack.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Stack.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

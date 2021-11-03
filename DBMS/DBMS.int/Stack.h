@@ -1,34 +1,34 @@
-#pragma once
+п»ї#pragma once
 #include <initializer_list>
 
 
 /**
- *  \brief Класс стек для хранения целых чисел.
+ *  \brief РљР»Р°СЃСЃ СЃС‚РµРє РґР»СЏ С…СЂР°РЅРµРЅРёСЏ С†РµР»С‹С… С‡РёСЃРµР».
  */
 class Stack
 {
 public:
 	/**
-	*  \brief Конструктор по умолчанию.
+	*  \brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ.
 	*/
 	Stack();
 
 	/**
-	*  \brief Создание объекта из последовательности.
+	*  \brief РЎРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚Р° РёР· РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё.
 	*/
 	Stack(std::initializer_list<int> value);
 
 	~Stack();
 
 	/**
-	*  \brief Добавляем элемент в стек.
-	*  \param value Целое значение.
+	*  \brief Р”РѕР±Р°РІР»СЏРµРј СЌР»РµРјРµРЅС‚ РІ СЃС‚РµРє.
+	*  \param value Р¦РµР»РѕРµ Р·РЅР°С‡РµРЅРёРµ.
 	*/
 	void Push(const int value);
 
 	/**
-	*  \brief Удаляем элемент в стек.
-	*  \return value Целое значение.
+	*  \brief РЈРґР°Р»СЏРµРј СЌР»РµРјРµРЅС‚ РІ СЃС‚РµРє.
+	*  \return value Р¦РµР»РѕРµ Р·РЅР°С‡РµРЅРёРµ.
 	*/
 	int Pop();
 
@@ -42,24 +42,24 @@ public:
 
 private:
 	/**
-   *  \brief Элементы стека для хранения целых чисел.
+   *  \brief Р­Р»РµРјРµРЅС‚С‹ СЃС‚РµРєР° РґР»СЏ С…СЂР°РЅРµРЅРёСЏ С†РµР»С‹С… С‡РёСЃРµР».
    */
 	class StackElement
 	{
 	public:
 		/**
-        *  \brief Конструктор по умолчанию.
+        *  \brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ.
         */
 		StackElement();
 
 		/**
-		*  \brief Конструктор с параметрами.
-		*  \param value Целое значение.
+		*  \brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё.
+		*  \param value Р¦РµР»РѕРµ Р·РЅР°С‡РµРЅРёРµ.
 		*/
 		StackElement(int value);
 
 		/**
-		*  \brief Деструктор.
+		*  \brief Р”РµСЃС‚СЂСѓРєС‚РѕСЂ.
 		*/
 		~StackElement();
 
@@ -68,7 +68,7 @@ private:
 		StackElement* next;
 	};
 
-	int size;
+	size_t size;
 
 	StackElement* top;
 
@@ -76,4 +76,3 @@ private:
 
 	Stack operator= (const Stack& rhs);
 };
-

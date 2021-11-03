@@ -5,6 +5,6 @@
 
 int main()
 {
-    std::cout << "answer is " << target::answer() << std::endl;
+    std::cout << "answer is " <<" Hello" << std::endl;
     return 0;
 }

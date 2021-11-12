@@ -36,6 +36,12 @@ public:
 	*/
 	int Pop();
 
+    /**
+	 * \brief
+	 * \return value Целое значение.
+	 */
+	int Peek() const;
+
 	/**
 	*  \brief .
 	*  \return .
@@ -59,15 +65,15 @@ private:
 		/**
 		*  \brief Конструктор с параметрами.
 		*  \param value Целое значение.
+		*  \param next
 		*/
-		StackElement(int value);
+		StackElement(int value, StackElement* next = nullptr);
 
 		/**
 		*  \brief Деструктор.
 		*/
 		~StackElement();
 
-	private:
 		int value;
 		StackElement* next;
 	};
@@ -78,5 +84,9 @@ private:
 
 	Stack(const Stack& rhs);
 
+	void Remove();
+
 	Stack operator= (const Stack& rhs);
 };
+
+

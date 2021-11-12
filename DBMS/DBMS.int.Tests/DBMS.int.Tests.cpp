@@ -16,8 +16,9 @@ namespace DBMSintTests
 			
 			// act
 			const auto result = new Stack();
+
 			// assert
-			Assert::IsNull(result);
+			Assert::IsNotNull(result);
 		}
 	};
 }

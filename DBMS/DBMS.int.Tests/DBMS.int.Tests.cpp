@@ -40,7 +40,7 @@ namespace DBMSintTests
 			//Arrange
 			const Stack stack = { 1, 2, 3 };
 			std::stringstream buffer;
-			const std::string expected = "1 2 3";
+			const std::string expected = "3 2 1 ";
 
 			//Act
 			buffer << stack;

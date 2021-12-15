@@ -98,7 +98,7 @@ std::ostream& operator<<(std::ostream& out, const Stack& stack)
     auto current = stack.top;
     while (current != nullptr)
     {
-        out << current->value;
+        out << current->value << " ";
         current = current->next;
     }
     return out;

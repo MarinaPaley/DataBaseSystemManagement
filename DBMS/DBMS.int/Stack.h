@@ -1,5 +1,7 @@
 ﻿#pragma once
 #include <initializer_list>
+#include <iostream>
+
 
 
 /**
@@ -49,6 +51,8 @@ public:
 	std::size_t GetSize() const;
 
 	bool isEmpty() const;
+
+	friend std::ostream& operator << (std::ostream& out, const Stack& stack);
 
 private:
 	/**

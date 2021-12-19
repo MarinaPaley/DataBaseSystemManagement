@@ -61,10 +61,6 @@ private:
 	class StackElement
 	{
 	public:
-		/**
-        *  \brief Конструктор по умолчанию.
-        */
-		StackElement();
 
 		/**
 		*  \brief Конструктор с параметрами.
@@ -78,7 +74,14 @@ private:
 		*/
 		~StackElement();
 
+		/**
+		*  \brief Хранящееся значение.
+		*/
 		int value;
+
+		/**
+		*  \brief Ссылка на следующий элемент.
+		*/
 		StackElement* next;
 	};
 
@@ -87,6 +90,8 @@ private:
 	StackElement* top;
 
 	Stack(const Stack& rhs);
+
+	Stack(const Stack&&);
 
 	void Remove();
 

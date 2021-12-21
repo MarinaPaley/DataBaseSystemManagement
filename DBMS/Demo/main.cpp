@@ -5,6 +5,8 @@
 
 int main()
 {
-    std::cout << "answer is " <<" Hello" << std::endl;
+    Stack stack = { 1, 2, 3, 4 };
+
+    std::cout << stack << std::endl;
     return 0;
 }

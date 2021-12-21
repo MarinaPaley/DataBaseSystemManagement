@@ -1,5 +1,7 @@
 ﻿#pragma once
 #include <initializer_list>
+#include <iostream>
+
 
 
 /**
@@ -15,9 +17,13 @@ public:
 
 	/**
 	*  \brief Создание объекта из последовательности.
+	*  \param values Последовательность значений, добавляемых в стек при инициализации.
 	*/
-	Stack(std::initializer_list<int> value);
+	Stack(const std::initializer_list<int> values);
 
+	/**
+	 *  \brief Деструктор.
+	 */
 	~Stack();
 
 	/**
@@ -32,6 +38,12 @@ public:
 	*/
 	int Pop();
 
+    /**
+	 * \brief
+	 * \return value Целое значение.
+	 */
+	int Peek() const;
+
 	/**
 	*  \brief .
 	*  \return .
@@ -40,6 +52,8 @@ public:
 
 	bool isEmpty() const;
 
+	friend std::ostream& operator << (std::ostream& out, const Stack& stack);
+
 private:
 	/**
    *  \brief Элементы стека для хранения целых чисел.
@@ -47,24 +61,27 @@ private:
 	class StackElement
 	{
 	public:
-		/**
-        *  \brief Конструктор по умолчанию.
-        */
-		StackElement();
 
 		/**
 		*  \brief Конструктор с параметрами.
 		*  \param value Целое значение.
+		*  \param next
 		*/
-		StackElement(int value);
+		StackElement(int value, StackElement* next = nullptr);
 
 		/**
 		*  \brief Деструктор.
 		*/
 		~StackElement();
 
-	private:
+		/**
+		*  \brief Хранящееся значение.
+		*/
 		int value;
+
+		/**
+		*  \brief Ссылка на следующий элемент.
+		*/
 		StackElement* next;
 	};
 
@@ -74,5 +91,11 @@ private:
 
 	Stack(const Stack& rhs);
 
+	Stack(const Stack&&);
+
+	void Remove();
+
 	Stack operator= (const Stack& rhs);
 };
+
+
